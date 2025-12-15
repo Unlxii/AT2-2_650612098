@@ -1,4 +1,4 @@
-# Integration Testing (Medium) — Starter
+# A2.2: Integration Testing Automation — Order Service
 
 เป้าหมาย
 - ฝึกทำ Integration Testing 3 แบบ: Top-down, Bottom-up, Sandwich
@@ -24,5 +24,13 @@
      - เพิ่ม region อื่น (เช่น "US")
 - สรุปสิ่งที่ค้นพบสั้นๆ (5–10 บรรทัด)
 
-โครงร่างสถาปัตยกรรม
-OrderService -> Inventory, Payment, Shipping, Email
+
+---
+
+## System Overview
+
+OrderService  
+├─ Inventory  
+├─ Payment  
+├─ Shipping  
+└─ Email  
