@@ -137,13 +137,4 @@ Missing:
 
 ---
 
-## Non-Functional Requirements
-
-- Python 3.10+
-- pytest
-- CI ผ่าน GitHub Actions
-- เทสต์ทั้งหมดควรรันภายในไม่กี่วินาที
-
----
-
 
