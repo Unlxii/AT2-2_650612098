@@ -66,19 +66,19 @@ Examples:
 - `order.py`
 
 ### High-Level Call Graph
-OrderService
- ├── InventoryRepository (InMemoryInventory)
- │    ├── reserve()
- │    └── release()
+OrderService  
+ ├── InventoryRepository    
+ │    ├── reserve()  
+ │    └── release()  
+ │  
+ ├── ShippingService  
+ │    └── cost()  
+ │  
+ ├── PaymentGateway    
+ │    └── charge()  
  │
- ├── ShippingService
- │    └── cost()
- │
- ├── PaymentGateway (SimplePayment / Stub)
- │    └── charge()
- │
- └── EmailService (Spy / Stub)
-      └── send()
+ └── EmailService    
+      └── send()  
 
 
 ### Extend Tests (see TODOs)
