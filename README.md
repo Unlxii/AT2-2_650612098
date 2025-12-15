@@ -1,4 +1,4 @@
-# A2.2: Integration Testing Automation — Order Service
+# A2.2: Handout for Integration Testing & Automation of Order Service
 
 เป้าหมาย
 - ฝึกทำ Integration Testing 3 แบบ: Top-down, Bottom-up, Sandwich
@@ -36,10 +36,10 @@
 - Automation: ทำผ่าน GitHub Actions (CI)
      - รันเฉพาะหมวดได้ เช่น pytest -m topdown -q
      - รันพร้อม coverage
-- ส่งไฟล์ที่เกี่ยวข้อง พร้อมตอบคำถาม โดยเขียนไว้ใน A2-2-STUDENTCODE.md
+- ส่ง URL ของ GitHub Repo สำหรับส่งงาน ที่มี folder ตรงกับหมายเลขงาน (เช่น AT2-2) ในนั้นมีไฟล์เทสต์ทั้งหมดและไฟล์​ตอบคำถาม (เช่น AT2-2-ANSWER.md) ในทุกไฟล์ที่ส่งขอให้มีรหัสนศ.ของคนทำ
      1. สิ่งที่ค้นพบว่าระบบไม่เป็นไปตามที่คาดหวังไว้ หรือปัญหาที่ไม่คิดว่าจะเจอ (อย่างต่ำ 5 บรรทัด)
      2. การทดสอบโค้ดนี้แบบอัตโนมัติ มีข้อดี ข้อเสียอะไรบ้าง
-     3. ขั้นตอนการ
+     3. ขั้นตอนการทำให้เทสต์รันอัตโนมัติอย่างเป็นระบบที่ทำในกิจกรรมนี้ คืออะไร
      4. ชุดทดสอบตั้งต้น ได้ coverage เท่าไร เมื่อเพิ่มกรณีทดสอบแล้ว ได้ coverage เท่าไร
      5. เป็นไปได้ไหมที่จะทำให้ได้ 100% integration test coverage ให้เหตุผล
 -  
