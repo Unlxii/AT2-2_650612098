@@ -1,4 +1,4 @@
-# Activity 2.2: Handout for Integration Testing — Order Service
+# Handout for Activity 2.2: Integration Testing of Order Service
 
 ## Objective
 Learn **Integration Testing** by practicing 3 common strategies:
