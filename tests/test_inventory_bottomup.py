@@ -31,10 +31,12 @@ def test_inventory_boundary_exact_amount():
         inv.reserve("Z", 1)
 
 @pytest.mark.bottomup
-#Boundary Test: Reserve 0 items (Should not change stock)
+# Boundary Test: Reserve 0 items (Should raise Error based on implementation)
 def test_inventory_boundary_zero_qty():
     inv = InMemoryInventory()
     inv.add_stock("X", 5)
+    
     with pytest.raises(InventoryError, match="qty must be > 0"):
         inv.reserve("X", 0)
+        
     assert inv.get_stock("X") == 5
