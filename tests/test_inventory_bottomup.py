@@ -1,7 +1,7 @@
 import pytest
 from inventory import InMemoryInventory, InventoryError
 
-@pytest.mark.inventory_bottomup
+@pytest.mark.bottomup
 # Test flow : add -> reserve -> check -> relese -> check
 def test_inventory_reserve_and_release():
     inv = InMemoryInventory()
@@ -11,7 +11,7 @@ def test_inventory_reserve_and_release():
     inv.release("S", 3)
     assert inv.get_stock("S") == 5
 
-@pytest.mark.inventory_bottomup
+@pytest.mark.bottomup
 # Test flow : when reserving more than available 
 def test_inventory_not_enough_stock():
     inv = InMemoryInventory()
@@ -19,7 +19,7 @@ def test_inventory_not_enough_stock():
     with pytest.raises(InventoryError):
         inv.reserve("S", 2)
         
-@pytest.mark.inventory_bottomup
+@pytest.mark.bottomup
 # Boundary Test: Reserve exact amount available (stock becomes 0)
 def test_inventory_boundary_exact_amount():
     inv = InMemoryInventory()

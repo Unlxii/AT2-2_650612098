@@ -8,7 +8,8 @@ import pytest
 class SpyEmail(EmailService):
     def __init__(self): self.calls = 0
     def send(self, to, subject, body): self.calls += 1
-
+    
+@pytest.mark.sandwich
 def test_order_success_with_real_payment():
     inv = InMemoryInventory()
     inv.add_stock("A", 2)
