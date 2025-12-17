@@ -35,5 +35,6 @@ def test_inventory_boundary_exact_amount():
 def test_inventory_boundary_zero_qty():
     inv = InMemoryInventory()
     inv.add_stock("X", 5)
-    inv.reserve("X", 0)
+    with pytest.raises(InventoryError, match="qty must be > 0"):
+        inv.reserve("X", 0)
     assert inv.get_stock("X") == 5
