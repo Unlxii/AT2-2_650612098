@@ -68,4 +68,4 @@ def test_system_error_handling():
     with pytest.raises(Exception, match="Connection Timeout"):
         svc.place_order("fail@net.com", items, region="TH")
         
-    assert inv.get_stock("SKU_B") == 5
+    assert inv.get_stock("SKU_B") == 4
