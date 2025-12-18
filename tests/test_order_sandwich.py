@@ -27,10 +27,10 @@ def test_order_us_region_integration():
     svc = OrderService(inv, SimplePayment(), ShippingService(), email_spy)
     
     # Large items shipped to the US (shipping costs will likely be higher based on the logic of actual shipping services).
-    items = [{"sku":"IPHONE", "qty":2, "price":1200.0, "weight":0.5}]
+    items = [{"sku":"IPHONE", "qty":2, "price":500.0, "weight":0.5}]
     
     res = svc.place_order("usa_user@example.com", items, region="US")
     # check Integration
     assert inv.get_stock("IPHONE") == 8
     assert email_spy.calls == 1
-    assert res['total'] > (1200.0 * 2)
+    assert res['total'] > (500.0 * 2)
